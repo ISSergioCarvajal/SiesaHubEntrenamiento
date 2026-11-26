@@ -1,3 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Entrenamiento Siesa Hub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+
+:root{
+    --siesa-blue:#00539B;
+    --siesa-blue-dark:#003B6F;
+    --siesa-light:#00A3E0;
+    --siesa-green:#48A23F;
+    --bg:#f4f6f9;
+    --card:#ffffff;
+    --text:#333333;
+    --border:#d9d9d9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.hero{
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--siesa-blue-dark),
+        var(--siesa-blue)
+    );
+
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.logo-placeholder{
+    width:250px;
+    height:80px;
+    margin:auto auto 30px auto;
+    background:#ffffff20;
+    border:2px dashed rgba(255,255,255,.5);
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:.9rem;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:900px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.intro{
+    background:white;
+    padding:40px;
+    margin-top:-30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.section{
+    padding:50px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.2rem;
+    color:var(--siesa-blue-dark);
+    margin-bottom:40px;
+}
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.step-card{
+
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    display:grid;
+    grid-template-columns:300px 1fr;
+}
+
+.step-image{
+
+    background:#edf3f9;
+    border-right:1px solid var(--border);
+
+    min-height:280px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    text-align:center;
+    padding:20px;
+}
+
+.step-image-box{
+    width:180px;
+    height:180px;
+
+    border-radius:20px;
+
+    border:2px dashed #9caaba;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.step-image p{
+    margin-top:15px;
+    font-size:.9rem;
+    color:#666;
+}
+
+.step-content{
+    padding:35px;
+}
+
+.step-number{
+    color:var(--siesa-blue);
+    font-weight:700;
+    margin-bottom:15px;
+    font-size:.95rem;
+}
+
+.step-title{
+    font-size:2rem;
+    color:var(--siesa-blue-dark);
+    margin-bottom:25px;
+}
+
+.responsable{
+
+    background:#eaf4ff;
+
+    border-left:5px solid var(--siesa-blue);
+
+    border-radius:8px;
+
+    padding:15px;
+
+    margin-bottom:20px;
+}
+
+.activity{
+
+    background:#fafafa;
+
+    border-radius:8px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+}
+
+.activity ul,
+.activity ol{
+    margin-left:25px;
+    margin-top:10px;
+}
+
+.result{
+
+    background:#eef8ef;
+
+    border-left:5px solid var(--siesa-green);
+
+    border-radius:8px;
+
+    padding:20px;
+}
+
+.final-banner{
+
+    background:var(--siesa-blue);
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    align-items:center;
+}
+
+.final-banner h2{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.resources{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:15px;
+}
+
+.resource{
+
+    background:white;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    padding:20px;
+
+    color:var(--siesa-blue-dark);
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.resource:hover{
+    transform:translateY(-4px);
+}
+
+.resource-icon{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.help{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.help h2{
+
+    font-size:3rem;
+    font-style:italic;
+    margin-bottom:20px;
+}
+
+.help-image{
+
+    width:100%;
+    height:350px;
+
+    border-radius:15px;
+
+    background:#edf3f9;
+
+    border:2px dashed #b6c5d3;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.footer{
+
+    margin-top:60px;
+
+    background:#002B50;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+@media(max-width:992px){
+
+    .step-card{
+        grid-template-columns:1fr;
+    }
+
+    .help{
+        grid-template-columns:1fr;
+    }
+
+    .final-banner{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<header class="hero">
+
+<div class="container">
+
+<div class="logo-placeholder">
+LOGO SIESA
+</div>
+
+<h1>Portal Entrenamiento Siesa Hub</h1>
+
+<p>
+Conozca el proceso de implementación,
+capacitación y puesta en marcha de Siesa Hub.
+Esta guía le permitirá completar correctamente todas las actividades requeridas para iniciar la operación de la plataforma.
+</p>
+
+</div>
+
+</header>
+
+<section class="container section">
+
+<div class="intro">
+
+<h2>Bienvenido</h2>
+
+<p>
+Este portal ha sido diseñado para acompañar a los clientes durante el proceso de implementación de Siesa Hub.
+Aquí encontrará las actividades, responsabilidades, documentación y recursos necesarios para lograr una puesta en marcha exitosa.
+</p>
+
+</div>
+
+</section>
+
+<section class="container section">
+
+<h2 class="section-title">Proceso de Implementación</h2>
+
+<div class="timeline">
+
+<!-- PASO 1 -->
+
+<div class="step-card">
+
+<div class="step-image">
+<div class="step-image-box">
+IMAGEN PASO 1
+</div>
+<p>Correo de inicio</p>
+</div>
+
+<div class="step-content">
+
+<div class="step-number">PASO 1 →</div>
+
+<h3 class="step-title">Correo de Inicio de Actividades</h3>
+
+<div class="responsable">
+<strong>Responsable:</strong> Siesa
+</div>
+
+<div class="activity">
+<strong>Actividad:</strong>
+El cliente recibirá un correo de bienvenida con la información necesaria para iniciar el proceso de implementación de Siesa Hub. Este mensaje incluirá los accesos iniciales, documentación de apoyo, actividades del proyecto, responsables y requisitos necesarios para la puesta en marcha de la solución.
+</div>
+
+<div class="result">
+<strong>Resultado esperado:</strong>
+El cliente conoce el alcance del proceso de implementación, identifica las actividades en las que debe participar y responde dentro de los tiempos establecidos para evitar retrasos en la configuración y puesta en marcha de Siesa Hub.
+</div>
+
+</div>
+</div>
+
+<!-- PASO 2 -->
+
+<div class="step-card">
+
+<div class="step-image">
+<div class="step-image-box">
+IMAGEN PASO 2
+</div>
+<p>Credenciales ERP</p>
+</div>
+
+<div class="step-content">
+
+<div class="step-number">PASO 2 →</div>
+
+<h3 class="step-title">Entrega de Credenciales del ERP</h3>
+
+<div class="responsable">
+<strong>Responsable:</strong> Cliente
+</div>
+
+<div class="activity">
+
+<strong>Actividad:</strong>
+
+<ol>
+<li>Crear un usuario dedicado para la integración.</li>
+<li>Asignar únicamente los permisos necesarios.</li>
+<li>Entregar cadena de conexión y credenciales requeridas.</li>
+<li>Validar accesibilidad y disponibilidad de ambientes.</li>
+</ol>
+
+</div>
+
+<div class="result">
+
+<strong>Resultado esperado:</strong>
+
+Siesa recibe credenciales seguras, verificadas y trazables que permitan configurar la comunicación entre el ERP y la plataforma sin comprometer la seguridad de la información.
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PASO 3 -->
+
+<div class="step-card">
+
+<div class="step-image">
+<div class="step-image-box">
+IMAGEN PASO 3
+</div>
+<p>Configuración</p>
+</div>
+
+<div class="step-content">
+
+<div class="step-number">PASO 3 →</div>
+
+<h3 class="step-title">Configurar Siesa Hub</h3>
+
+<div class="responsable">
+<strong>Responsable:</strong> Siesa
+</div>
+
+<div class="activity">
+
+<strong>Actividad:</strong>
+
+<ul>
+<li>Configuración del ecosistema.</li>
+<li>Parámetros de integración.</li>
+<li>Conexión al ERP.</li>
+<li>Creación de compañías.</li>
+<li>Perfiles y usuarios iniciales.</li>
+<li>Pruebas técnicas de comunicación.</li>
+</ul>
+
+</div>
+
+<div class="result">
+
+<strong>Resultado esperado:</strong>
+
+La plataforma queda configurada, conectada al ERP y lista para que el cliente ingrese tanto al ambiente QA como al ambiente CORE.
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PASO 4 -->
+
+<div class="step-card">
+
+<div class="step-image">
+<div class="step-image-box">
+IMAGEN PASO 4
+</div>
+<p>Documentación</p>
+</div>
+
+<div class="step-content">
+
+<div class="step-number">PASO 4 →</div>
+
+<h3 class="step-title">Acceder a Siesa Hub y Revisar la Documentación</h3>
+
+<div class="responsable">
+<strong>Responsable:</strong> Cliente
+</div>
+
+<div class="activity">
+
+<strong>Actividad:</strong>
+
+<ol>
+<li>Validar acceso a QA y CORE.</li>
+<li>Realizar cambio de contraseña inicial.</li>
+<li>Revisar documentación disponible.</li>
+<li>Consultar guías de conectividad y usuarios.</li>
+<li>Consultar APIs V2.</li>
+<li>Documentar inquietudes para la sesión técnica.</li>
+</ol>
+
+</div>
+
+<div class="result">
+
+<strong>Resultado esperado:</strong>
+
+Los usuarios cuentan con acceso activo a QA y CORE, comprenden los conceptos fundamentales de Siesa Hub y tienen identificadas sus dudas para aprovechar al máximo la capacitación.
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PASO 5 -->
+
+<div class="step-card">
+
+<div class="step-image">
+<div class="step-image-box">
+IMAGEN PASO 5
+</div>
+<p>Capacitación</p>
+</div>
+
+<div class="step-content">
+
+<div class="step-number">PASO 5 →</div>
+
+<h3 class="step-title">Capacitación Funcional y Técnica</h3>
+
+<div class="responsable">
+<strong>Responsable:</strong> Siesa y Cliente
+</div>
+
+<div class="activity">
+
+<strong>Actividad:</strong>
+
+Revisión de dudas, pruebas de consumo de APIs, manejo del documentador, conectores, seguridad, permisos y mejores prácticas de operación.
+
+</div>
+
+<div class="result">
+
+<strong>Resultado esperado:</strong>
+
+El cliente despeja sus dudas técnicas y operativas, adquiere claridad sobre la solución implementada y cuenta con los conocimientos necesarios para iniciar las pruebas e integraciones de forma autónoma.
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PASO 6 -->
+
+<div class="step-card">
+
+<div class="step-image">
+<div class="step-image-box">
+IMAGEN PASO 6
+</div>
+<p>Cierre</p>
+</div>
+
+<div class="step-content">
+
+<div class="step-number">PASO 6 →</div>
+
+<h3 class="step-title">Formalización y Cierre de la Entrega</h3>
+
+<div class="responsable">
+<strong>Responsable:</strong> Siesa
+</div>
+
+<div class="activity">
+
+<strong>Actividad:</strong>
+
+<ul>
+<li>Entrega formal de ambientes.</li>
+<li>Transferencia de conocimiento.</li>
+<li>Entrega de canales de soporte.</li>
+<li>Registro administrativo de cierre.</li>
+</ul>
+
+</div>
+
+<div class="result">
+
+<strong>Resultado esperado:</strong>
+
+Se formaliza el cierre exitoso de la implementación y capacitación de Siesa Hub, dejando trazabilidad completa y habilitando al cliente para operar de manera autónoma con respaldo de soporte oficial.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="container section">
+
+<div class="final-banner">
+
+<div>
+
+<h2>🚀 Listo para Operar Siesa Hub</h2>
+
+<p>
+Al finalizar estas actividades contará con los conocimientos y accesos necesarios para operar Siesa Hub de manera eficiente.
+Recuerde consultar la documentación disponible y apoyarse en los canales de soporte para resolver cualquier requerimiento futuro.
+</p>
+
+</div>
+
+<div class="resources">
+
+<a href="#" class="resource">
+<div class="resource-icon">🌐</div>
+Siesa Hub
 </a>
 
 <a href="#" class="resource">
