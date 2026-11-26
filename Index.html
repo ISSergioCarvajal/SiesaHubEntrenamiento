@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Empresa | Soluciones Empresariales</title>
+
+    <meta name="description"
+          content="Conoce nuestros servicios y soluciones empresariales.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: #102a43;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+        }
+
+        .hero {
+            background: #176b87;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #ffffff;
+            color: #176b87;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .service {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 280px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        .service h3 {
+            margin-bottom: 15px;
+            color: #176b87;
+        }
+
+        footer {
+            background: #102a43;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Mi Empresa</h2>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <h1>Soluciones para tu empresa</h1>
+
+            <p>
+                Innovación, calidad y compromiso para impulsar
+                el crecimiento de tu negocio.
+            </p>
+
+            <a href="#contacto" class="button">
+                Contáctanos
+            </a>
+        </section>
+
+        <section id="nosotros">
+            <h2>¿Quiénes somos?</h2>
+
+            <p>
+                Somos una empresa comprometida con ofrecer
+                soluciones de calidad, ayudando a nuestros
+                clientes a alcanzar sus objetivos.
+            </p>
+        </section>
+
+        <section id="servicios">
+            <h2>Nuestros servicios</h2>
+
+            <div class="services">
+
+                <article class="service">
+                    <h3>Servicio 1</h3>
+                    <p>
+                        Soluciones diseñadas para las necesidades
+                        de nuestros clientes.
+                    </p>
+                </article>
+
+                <article class="service">
+                    <h3>Servicio 2</h3>
+                    <p>
+                        Acompañamiento y asesoría profesional
+                        para tu negocio.
+                    </p>
+                </article>
+
+                <article class="service">
+                    <h3>Servicio 3</h3>
+                    <p>
+                        Innovación y tecnología para mejorar
+                        tus procesos empresariales.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Estamos listos para ayudarte.</p>
+            <p>Correo: contacto@miempresa.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Mi Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
