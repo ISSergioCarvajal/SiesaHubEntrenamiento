@@ -439,11 +439,20 @@ IMAGEN PASO 2
 
 <strong>Actividad:</strong>
 
+    El cliente debe crear, validar y suministrar a Siesa los accesos necesarios para conectar el ERP con Siesa Hub:
+
+
+
+
+
+Cadena de conexión (ConnectionString) a la Base de Datos: Si el cliente maneja el ERP en modalidad Local, debe entregar la cadena de conexión SQL (IP/URL del servidor, nombre de la base de datos y credenciales con permisos de solo lectura) tanto para pruebas como para producción. (Si el cliente es Siesa Cloud, esta información la gestiona directamente Siesa IT).
 <ol>
-<li>Crear un usuario dedicado para la integración.</li>
-<li>Asignar únicamente los permisos necesarios.</li>
-<li>Entregar cadena de conexión y credenciales requeridas.</li>
-<li>Validar accesibilidad y disponibilidad de ambientes.</li>
+<li>El cliente debe crear, validar y suministrar a Siesa los accesos necesarios para conectar el ERP con Siesa Hub:
+
+
+<li>Usuario dedicado del ERP: Crear un perfil exclusivo para la integración con una nomenclatura fácilmente identificable (ej. Integracion_SiesaHub) para garantizar la trazabilidad de las transacciones.</li>
+<li>Permisos estrictos (Principio de mínimo privilegio): Habilitar únicamente los módulos y procesos que serán objeto de integración (por ejemplo, si la integración es solo financiera, restringir el acceso a otros módulos).</li>
+<li>Cadena de conexión (ConnectionString) a la Base de Datos: Si el cliente maneja el ERP en modalidad Local, debe entregar la cadena de conexión SQL (IP/URL del servidor, nombre de la base de datos y credenciales con permisos de solo lectura) tanto para pruebas como para producción. (Si el cliente es Siesa Cloud, esta información la gestiona directamente Siesa IT).</li></li>
 </ol>
 
 </div>
