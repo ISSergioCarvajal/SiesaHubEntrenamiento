@@ -1,203 +1,419 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Entrenamiento Siesa Hub</title>
 
-    <title>Mi Empresa | Soluciones Empresariales</title>
+<style>
 
-    <meta name="description"
-          content="Conoce nuestros servicios y soluciones empresariales.">
+:root{
+    --primary:#0078d4;
+    --secondary:#005a9e;
+    --success:#107c10;
+    --background:#f4f6f9;
+    --card:#ffffff;
+    --text:#323130;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            color: #263238;
-            background: #f5f7fa;
-        }
+body{
+    background:var(--background);
+    color:var(--text);
+    line-height:1.6;
+}
 
-        header {
-            background: #102a43;
-            color: white;
-            padding: 22px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.hero{
+    background:linear-gradient(135deg,#0078d4,#005a9e);
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
 
-        header h2 {
-            font-size: 24px;
-        }
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 22px;
-        }
+.hero p{
+    max-width:800px;
+    margin:auto;
+    opacity:.95;
+}
 
-        .hero {
-            background: #176b87;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
+.section{
+    padding:60px 0;
+}
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
+.section-title{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:40px;
+    color:var(--secondary);
+}
 
-        .button {
-            display: inline-block;
-            background: #ffffff;
-            color: #176b87;
-            padding: 14px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
 
-        section {
-            padding: 65px 8%;
-            text-align: center;
-        }
+.step{
+    display:flex;
+    background:var(--card);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.07);
+}
 
-        .services {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            margin-top: 35px;
-        }
+.step-number{
+    min-width:90px;
+    background:var(--primary);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;
+    font-weight:bold;
+}
 
-        .service {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            width: 280px;
-            box-shadow: 0 3px 12px #00000012;
-        }
+.step-content{
+    padding:25px;
+}
 
-        .service h3 {
-            margin-bottom: 15px;
-            color: #176b87;
-        }
+.step-content h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
 
-        footer {
-            background: #102a43;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+.tag{
+    display:inline-block;
+    padding:5px 12px;
+    margin-bottom:15px;
+    border-radius:20px;
+    background:#e7f3ff;
+    color:#005a9e;
+    font-size:.9rem;
+    font-weight:600;
+}
 
-        @media (max-width: 650px) {
-            header {
-                flex-direction: column;
-                gap: 18px;
-            }
+.resultado{
+    margin-top:15px;
+    background:#f3f9f3;
+    padding:15px;
+    border-left:5px solid var(--success);
+    border-radius:5px;
+}
 
-            nav a {
-                margin: 0 7px;
-            }
+.resources{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
 
-            .hero h1 {
-                font-size: 30px;
-            }
-        }
-    </style>
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+    transition:0.2s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.card a{
+    text-decoration:none;
+    color:#0078d4;
+    font-weight:bold;
+}
+
+.help{
+    background:#eaf4ff;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+}
+
+.help h2{
+    margin-bottom:15px;
+    color:var(--primary);
+}
+
+.help .btn{
+    display:inline-block;
+    margin-top:20px;
+    background:var(--primary);
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.ready{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.ready h2{
+    color:var(--success);
+    margin-bottom:15px;
+    font-size:2.2rem;
+}
+
+footer{
+    background:#1f1f1f;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.step{
+    flex-direction:column;
+}
+
+.step-number{
+    min-height:70px;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
+}
+
+</style>
 </head>
-
 <body>
 
-    <header>
-        <h2>Mi Empresa</h2>
+<header class="hero">
+    <div class="container">
+        <h1>Portal Entrenamiento Siesa Hub</h1>
 
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+        <p>
+            Guía de implementación, capacitación y puesta en marcha
+            de Siesa Hub para clientes e integradores.
+        </p>
+    </div>
+</header>
 
-    <main>
-        <section class="hero" id="inicio">
-            <h1>Soluciones para tu empresa</h1>
+<section class="section">
+<div class="container">
 
-            <p>
-                Innovación, calidad y compromiso para impulsar
-                el crecimiento de tu negocio.
-            </p>
+<h2 class="section-title">Proceso de Implementación</h2>
 
-            <a href="#contacto" class="button">
-                Contáctanos
-            </a>
-        </section>
+<div class="timeline">
 
-        <section id="nosotros">
-            <h2>¿Quiénes somos?</h2>
+<div class="step">
+<div class="step-number">1</div>
+<div class="step-content">
 
-            <p>
-                Somos una empresa comprometida con ofrecer
-                soluciones de calidad, ayudando a nuestros
-                clientes a alcanzar sus objetivos.
-            </p>
-        </section>
+<h3>Correo de Inicio de Actividades</h3>
 
-        <section id="servicios">
-            <h2>Nuestros servicios</h2>
+<span class="tag">Responsable: Siesa</span>
 
-            <div class="services">
+<p>
+El cliente recibirá un correo de bienvenida con la información necesaria para iniciar el proceso de implementación de Siesa Hub. Este mensaje incluirá accesos, documentación, responsables, actividades y requisitos necesarios para la puesta en marcha de la solución.
+</p>
 
-                <article class="service">
-                    <h3>Servicio 1</h3>
-                    <p>
-                        Soluciones diseñadas para las necesidades
-                        de nuestros clientes.
-                    </p>
-                </article>
+<div class="resultado">
+<b>Resultado esperado:</b>
+El cliente conoce el alcance del proceso de implementación, identifica las actividades en las que debe participar y responde dentro de los tiempos establecidos para evitar retrasos en la configuración y puesta en marcha de Siesa Hub.
+</div>
 
-                <article class="service">
-                    <h3>Servicio 2</h3>
-                    <p>
-                        Acompañamiento y asesoría profesional
-                        para tu negocio.
-                    </p>
-                </article>
+</div>
+</div>
 
-                <article class="service">
-                    <h3>Servicio 3</h3>
-                    <p>
-                        Innovación y tecnología para mejorar
-                        tus procesos empresariales.
-                    </p>
-                </article>
+<div class="step">
+<div class="step-number">2</div>
+<div class="step-content">
 
-            </div>
-        </section>
+<h3>Entrega de Credenciales del ERP</h3>
 
-        <section id="contacto">
-            <h2>Contáctanos</h2>
-            <p>Estamos listos para ayudarte.</p>
-            <p>Correo: contacto@miempresa.com</p>
-        </section>
-    </main>
+<span class="tag">Responsable: Cliente</span>
 
-    <footer>
-        <p>© 2026 Mi Empresa. Todos los derechos reservados.</p>
-    </footer>
+<p>
+El cliente suministra las credenciales y permisos necesarios para realizar la integración con el ERP y ejecutar las pruebas requeridas.
+</p>
+
+<div class="resultado">
+<b>Resultado esperado:</b>
+Disponibilidad de credenciales válidas y permisos adecuados para iniciar las configuraciones.
+</div>
+
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<div class="step-content">
+
+<h3>Configuración Inicial de Siesa Hub</h3>
+
+<span class="tag">Responsable: Siesa</span>
+
+<p>
+Se realizan las configuraciones necesarias en los ambientes de pruebas (QA) y producción (CORE), estableciendo la comunicación entre plataformas.
+</p>
+
+<div class="resultado">
+<b>Resultado esperado:</b>
+Plataforma configurada y lista para iniciar validaciones e integraciones.
+</div>
+
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<div class="step-content">
+
+<h3>Acceso a la Plataforma y Revisión de Documentación</h3>
+
+<span class="tag">Responsable: Cliente</span>
+
+<p>
+Los usuarios accederán a los ambientes suministrados y revisarán la documentación funcional y técnica disponible.
+</p>
+
+<div class="resultado">
+<b>Resultado esperado:</b>
+Los usuarios cuentan con acceso a la plataforma y conocen la documentación base necesaria para operar Siesa Hub.
+</div>
+
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">5</div>
+<div class="step-content">
+
+<h3>Capacitación Funcional y Técnica</h3>
+
+<span class="tag">Responsable: Siesa y Cliente</span>
+
+<p>
+Sesión de acompañamiento enfocada en la operación, monitoreo y administración de integraciones dentro de Siesa Hub.
+</p>
+
+<div class="resultado">
+<b>Resultado esperado:</b>
+El cliente comprende la operación de la plataforma y las buenas prácticas para la gestión de integraciones.
+</div>
+
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">6</div>
+<div class="step-content">
+
+<h3>Validación y Cierre de Implementación</h3>
+
+<span class="tag">Responsable: Siesa y Cliente</span>
+
+<p>
+Se realizan las validaciones finales y la aprobación conjunta de la implementación.
+</p>
+
+<div class="resultado">
+<b>Resultado esperado:</b>
+La solución queda aprobada y preparada para operación productiva.
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<h2 class="section-title">📚 Recursos de Apoyo</h2>
+
+<div class="resources">
+
+<div class="card">
+<h3>Guía de Conectividad</h3>
+<a href="#">Consultar documentación</a>
+</div>
+
+<div class="card">
+<h3>Gestión de Usuarios</h3>
+<a href="#">Consultar documentación</a>
+</div>
+
+<div class="card">
+<h3>APIs V2</h3>
+<a href="#">Consultar documentación</a>
+</div>
+
+<div class="card">
+<h3>Video de Capacitación</h3>
+<a href="#">Ver grabación</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="help">
+
+<h2>¿Necesita ayuda?</h2>
+
+<p>
+Si durante la implementación o uso de Siesa Hub presenta alguna inquietud, contacte al equipo de implementación o a la mesa de servicio.
+</p>
+
+<a href="#" class="btn">Solicitar Soporte</a>
+
+</div>
+
+</div>
+</section>
+
+<section class="ready">
+
+<h2>🚀 Listo para Operar Siesa Hub</h2>
+
+<p>
+Al finalizar estas actividades contará con los accesos,
+conocimientos y configuraciones necesarias para utilizar
+Siesa Hub de forma exitosa.
+</p>
+
+</section>
+
+<footer>
+Portal Entrenamiento Siesa Hub © 2026
+</footer>
 
 </body>
 </html>
