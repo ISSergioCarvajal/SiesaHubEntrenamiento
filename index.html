@@ -1552,6 +1552,184 @@ Si durante la configuración o el uso de Siesa Hub presenta dudas o inconvenient
 
 </section>
 
+
+<section id="preguntas-frecuentes" class="section-container">
+    <div class="section-header">
+        <h2>Preguntas frecuentes</h2>
+        <p>
+            Encuentra respuestas a las preguntas más comunes sobre
+            el acceso, configuración y consumo de servicios de Siesa Hub.
+        </p>
+    </div>
+
+    <div class="faq-category">
+        <h3>1. Acceso y administración de usuarios</h3>
+
+        <details class="faq-item">
+            <summary>¿Quién puede crear usuarios en Siesa Hub?</summary>
+            <p>El administrador del cliente puede crear usuarios adicionales desde la plataforma.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Se pueden asignar permisos diferentes a cada usuario?</summary>
+            <p>Sí. El administrador puede asignar permisos específicos según el rol de cada usuario.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Es posible crear roles personalizados?</summary>
+            <p>Sí. El administrador puede crear y configurar roles de acuerdo con los permisos habilitados en Siesa Hub.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Cómo recibe un usuario sus credenciales de acceso?</summary>
+            <p>El usuario recibe la información de acceso mediante correo electrónico. En su primer ingreso debe cambiar la contraseña.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Cómo recupero mi contraseña?</summary>
+            <p>Desde la página de acceso de Siesa Hub, selecciona la opción «¿Olvidaste tu contraseña?». El sistema enviará un correo con un enlace para restablecerla.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Puedo cambiar mi contraseña?</summary>
+            <p>Sí. Puedes cambiarla en cualquier momento desde la configuración de tu perfil.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Qué sucede cuando se desactiva un usuario?</summary>
+            <p>El usuario pierde inmediatamente el acceso a Siesa Hub. El administrador puede reactivarlo desde la administración de usuarios.</p>
+        </details>
+    </div>
+
+    <div class="faq-category">
+        <h3>2. Ambientes y credenciales</h3>
+
+        <details class="faq-item">
+            <summary>¿Qué ambientes se entregan al cliente?</summary>
+            <p>Se entregan simultáneamente los ambientes QA (pruebas) y CORE (operación real).</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Las API son diferentes para QA y CORE?</summary>
+            <p>No. Las API son estándar. Siesa realiza la parametrización correspondiente y asigna las credenciales específicas para cada ambiente.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Qué diferencia existe entre QA y CORE?</summary>
+            <p>QA se utiliza para realizar pruebas con información de prueba. CORE corresponde al ambiente de operación real y utiliza la información real del ERP del cliente.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Qué credenciales se utilizan para consumir las API?</summary>
+            <p>Las aplicaciones deben autenticarse utilizando las llaves secretas <strong>conniKey</strong> y <strong>conniToken</strong>, enviadas en los encabezados (headers) de las solicitudes HTTP.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Quién entrega las credenciales?</summary>
+            <p>El equipo de Siesa genera y entrega las credenciales correspondientes a cada ambiente. QA y CORE tienen credenciales independientes.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Qué debo revisar si recibo un error de autenticación?</summary>
+            <p>Verifica que las credenciales utilizadas correspondan al ambiente al que estás intentando conectarte. No debes utilizar las llaves de QA para consumir servicios de CORE, ni viceversa.</p>
+        </details>
+    </div>
+
+    <div class="faq-category">
+        <h3>3. Integración y consumo de API</h3>
+
+        <details class="faq-item">
+            <summary>¿Dónde consulto las URL de los servicios?</summary>
+            <p>Las URL y la documentación de los servicios disponibles se consultan directamente en el documentador de Siesa Hub.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Puedo ejecutar las API desde el documentador?</summary>
+            <p>El documentador está destinado a consultar la documentación. Para ejecutar y probar los servicios puedes utilizar herramientas externas como Postman.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Siesa proporciona una colección de Postman?</summary>
+            <p>Sí. Siesa proporciona una colección de Postman para realizar pruebas con los servicios disponibles en QA.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Cómo consumo los servicios en CORE?</summary>
+            <p>Puedes adaptar la colección de Postman de QA reemplazando las URL y credenciales por las correspondientes a CORE. También puedes consumir directamente los servicios desde tu aplicación utilizando la configuración de ese ambiente.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Qué métodos HTTP utilizan las API?</summary>
+            <p>Los servicios utilizan los métodos HTTP GET y POST.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Cuál es el formato de intercambio de información?</summary>
+            <p>Las solicitudes y respuestas utilizan formato JSON.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Qué debo hacer si una solicitud presenta timeout?</summary>
+            <p>Debes realizar nuevamente la solicitud.</p>
+        </details>
+    </div>
+
+    <div class="faq-category">
+        <h3>4. Pruebas y servicios disponibles</h3>
+
+        <details class="faq-item">
+            <summary>¿En qué ambiente debo realizar las pruebas iniciales?</summary>
+            <p>Las pruebas iniciales de integración deben realizarse exclusivamente en QA.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Quién realiza las pruebas de integración?</summary>
+            <p>El cliente realiza y valida los ejercicios de integración en QA, con acompañamiento del equipo de Siesa.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Qué hago si un servicio no aparece en el documentador?</summary>
+            <p>Debes comunicarte con el equipo de Siesa para solicitar la evaluación de disponibilidad del servicio.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Cómo solicito un nuevo servicio?</summary>
+            <p>Debes proporcionar una descripción del requerimiento y detallar la información que necesitas consultar o enviar. La solicitud debe estar relacionada con el CMX asignado a tu cliente.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿A quién envío la solicitud de un nuevo servicio?</summary>
+            <p>La solicitud debe enviarse por correo electrónico al consultor asignado.</p>
+        </details>
+    </div>
+
+    <div class="faq-category">
+        <h3>5. Errores y soporte</h3>
+
+        <details class="faq-item">
+            <summary>¿Qué debo validar cuando un servicio devuelve un error?</summary>
+            <p>Verifica los parámetros enviados, la información de la solicitud, las credenciales y el ambiente utilizado. Si el problema persiste, documenta el error y escálalo al consultor asignado.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Qué información debo adjuntar al reportar un error?</summary>
+            <p>Incluye la URL del servicio, los parámetros enviados, la respuesta obtenida y una captura de pantalla como evidencia.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Dónde puedo escalar un inconveniente?</summary>
+            <p>Debes registrar un ticket de servicio a través del portal de soporte de Siesa.</p>
+            <p>
+                <a href="https://www.siesacustomersupport.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Ir al portal de soporte Siesa
+                </a>
+            </p>
+        </details>
+    </div>
+</section>
+
 <footer class="footer">
 
 Portal Entrenamiento Siesa Hub<br>
