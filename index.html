@@ -10,22 +10,34 @@
 
 <style>
 
-/* 1. Imagen ajustada dentro de la tarjeta */
+  .contenedor-imagen-paso {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* Borde sólido muy sutil en vez de punteado */
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Sombra suave tipo tarjeta */
+  max-width: 260px; /* Ancho ideal para la columna izquierda */
+  width: 100%;
+  margin: 0 auto 12px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
 .imagen-expandible {
-  max-width: 100%;
-  max-height: 220px; /* Controla la altura máxima en la tarjeta */
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  cursor: zoom-in; /* Muestra el ícono de lupa (+) */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  height: auto; /* Se ajusta automáticamente sin dejar espacios vacíos arriba y abajo */
+  display: block;
+  border-radius: 6px;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
 }
 
 .imagen-expandible:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
 }
+/* 1. Imagen ajustada dentro de la tarjeta */
 
 /* 2. Fondo oscuro cuando se expande (Lightbox) */
 .modal-visor {
