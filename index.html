@@ -417,6 +417,13 @@ Esta guía le permitirá completar correctamente todas las actividades requerida
 
 <section class="container section">
 
+
+  <!-- Pon este bloque una sola vez antes de cerrar la etiqueta </body> -->
+<div id="modal-visor" class="modal-visor" onclick="cerrarModal()">
+  <span class="cerrar-modal">&times;</span>
+  <img class="modal-contenido" id="imagen-ampliada" alt="Vista ampliada">
+</div>
+
 <h2 class="section-title">Proceso de Implementación</h2>
 
 <div class="timeline">
@@ -427,7 +434,10 @@ Esta guía le permitirá completar correctamente todas las actividades requerida
 
 <div class="step-image">
 <div class="step-image-box">
-<img src="Correo.png" alt="Logo Siesa">
+  <div class="columna-izquierda">
+  <img src="Correo.png" alt="Correo de inicio" class="imagen-expandible">
+  <p>Correo de inicio</p>
+</div>
 </div>
 <p>Correo de inicio</p>
 </div>
