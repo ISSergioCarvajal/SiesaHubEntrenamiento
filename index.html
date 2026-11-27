@@ -26,12 +26,17 @@
 }
 
 .imagen-expandible {
-  width: 100%;
-  height: auto; /* Se ajusta automáticamente sin dejar espacios vacíos arriba y abajo */
-  display: block;
-  border-radius: 6px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover; /* Llena todo el cuadrado de 180x180 sin deformar */
+  object-position: center; /* Centra la ventana de inicio de sesión */
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   cursor: zoom-in;
-  transition: transform 0.2s ease;
+  display: block;
+  margin: 0 auto 12px auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .imagen-expandible:hover {
