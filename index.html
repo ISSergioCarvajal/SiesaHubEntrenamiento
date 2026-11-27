@@ -13,6 +13,176 @@
    PASO 4 - CENTRO DE PREPARACION
 =================================== */
 
+/* ===================================
+   ENCABEZADO SIESA HUB
+=================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(120deg, #073B70 0%, #07569A 55%, #087CC1 100%);
+    color: white;
+    padding: 65px 0 75px;
+    min-height: 440px;
+}
+
+.hero .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.hero-brand img {
+    max-width: 155px;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+.hero-brand span {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 30px;
+    background: rgba(255,255,255,.10);
+    color: #D9EEFF;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    color: #E3F1FC;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 23px;
+    background: white;
+    color: #07569A;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.hero-button:hover {
+    background: #E7F3FC;
+    transform: translateY(-3px);
+}
+
+.hero-button span {
+    font-size: 20px;
+}
+
+/* Elementos gráficos decorativos */
+
+.hero-decoration {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    width: 430px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.hero-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+.hero-circle-one {
+    width: 350px;
+    height: 350px;
+    right: 0;
+    top: -20px;
+}
+
+.hero-circle-two {
+    width: 250px;
+    height: 250px;
+    right: 50px;
+    top: 30px;
+}
+
+.hero-orbit {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: 115px;
+    top: 95px;
+    border: 2px solid rgba(255,255,255,.25);
+    border-radius: 30px;
+    transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 45px 0;
+    }
+
+    .hero .container {
+        min-height: auto;
+    }
+
+    .hero-decoration {
+        opacity: .35;
+        right: -230px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-brand {
+        margin-bottom: 28px;
+    }
+}
+
 /* PREGUNTAS FRECUENTES */
 #preguntas-frecuentes {
     padding: 40px 20px;
@@ -631,25 +801,49 @@ body{
 </head>
 <body>
 
+
 <header class="hero">
+    <div class="container">
 
-<div class="container">
+        <div class="hero-content">
 
-<div class="logo-placeholder">
-<img src="logo.webp" alt="Logo Siesa">
-</div>
+            <div class="hero-brand">
+                <img src="logo.webp" alt="Siesa Hub">
+                <span>HUB</span>
+            </div>
 
-<h1>Portal Entrenamiento Siesa Hub</h1>
+            <div class="hero-label">
+                CENTRO DE ENTRENAMIENTO
+            </div>
 
-<p>
-Conozca el proceso de implementación,
-capacitación y puesta en marcha de Siesa Hub.
-Esta guía le permitirá completar correctamente todas las actividades requeridas para iniciar la operación de la plataforma.
-</p>
+            <h1>
+                Conectamos tu empresa<br>
+                con el ecosistema digital
+            </h1>
 
-</div>
+            <p>
+                Bienvenido al centro de entrenamiento de Siesa Hub.
+                Aquí encontrarás la guía para configurar, integrar y
+                poner en marcha tu plataforma, con el acompañamiento
+                necesario en cada etapa del proceso.
+            </p>
 
+            <a href="#proceso-implementacion" class="hero-button">
+                Conocer el proceso
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="hero-decoration">
+            <div class="hero-circle hero-circle-one"></div>
+            <div class="hero-circle hero-circle-two"></div>
+            <div class="hero-orbit"></div>
+        </div>
+
+    </div>
 </header>
+
 
 <section class="container section">
 
