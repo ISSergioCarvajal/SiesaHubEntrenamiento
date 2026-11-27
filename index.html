@@ -9,6 +9,169 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
+  /* ===================================
+   PASO 4 - CENTRO DE PREPARACION
+=================================== */
+
+.paso4-intro{
+    background:linear-gradient(135deg,#eaf4ff,#f8fbff);
+    border:1px solid #cfe3f7;
+    border-radius:14px;
+    padding:22px;
+    margin-bottom:25px;
+}
+
+.paso4-intro h4{
+    color:var(--siesa-blue-dark);
+    font-size:1.3rem;
+    margin-bottom:10px;
+}
+
+.paso4-intro p{
+    margin-bottom:12px;
+}
+
+.paso4-bloque{
+    margin-bottom:30px;
+}
+
+.paso4-subtitulo{
+    color:var(--siesa-blue-dark);
+    font-size:1.35rem;
+    margin-bottom:15px;
+}
+
+.paso4-accesos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.paso4-acceso{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:20px;
+    transition:.3s;
+}
+
+.paso4-acceso:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.paso4-acceso h4{
+    color:var(--siesa-blue-dark);
+    margin-bottom:10px;
+}
+
+.paso4-acceso p{
+    font-size:.95rem;
+    margin-bottom:15px;
+}
+
+.paso4-etiqueta{
+    display:inline-block;
+    background:#eaf4ff;
+    color:var(--siesa-blue);
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:.8rem;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.paso4-recursos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.paso4-recurso{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    transition:.3s;
+}
+
+.paso4-recurso:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.paso4-recurso-icono{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.paso4-recurso h4{
+    color:var(--siesa-blue-dark);
+    margin-bottom:10px;
+}
+
+.paso4-recurso p{
+    font-size:.9rem;
+    margin-bottom:15px;
+    flex-grow:1;
+}
+
+.paso4-boton{
+    display:block;
+    text-align:center;
+    background:var(--siesa-blue);
+    color:white;
+    padding:11px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.paso4-boton:hover{
+    background:var(--siesa-blue-dark);
+}
+
+.paso4-checklist{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:20px;
+}
+
+.paso4-checklist ul{
+    list-style:none;
+    margin-top:15px;
+}
+
+.paso4-checklist li{
+    margin-bottom:12px;
+    padding-left:5px;
+}
+
+.paso4-checklist li::before{
+    content:"✓";
+    color:var(--siesa-green);
+    font-weight:bold;
+    margin-right:10px;
+}
+
+.paso4-nota{
+    background:#fff7ed;
+    border-left:5px solid #f59e0b;
+    padding:15px;
+    border-radius:8px;
+    margin-top:20px;
+}
+
+@media(max-width:600px){
+    .paso4-recursos,
+    .paso4-accesos{
+        grid-template-columns:1fr;
+    }
+}
 
   .contenedor-imagen-paso {
   background-color: #ffffff;
